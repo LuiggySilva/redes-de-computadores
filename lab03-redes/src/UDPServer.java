@@ -31,8 +31,8 @@ class UDPServer {
 			if(!receivedRequests.containsKey(idPckt)) {
 				receivedRequests.put(idPckt, sentence);
 				receivedRequestsCouting.put(idPckt, 1);
-				
-				//serverSocket.send(sendACK);
+				// Só comentar o envio do Ack pra testar a perda de ACK do servidor
+				serverSocket.send(sendACK);
 				//printReceivedRequests(receivedRequests);
 			}
 			
